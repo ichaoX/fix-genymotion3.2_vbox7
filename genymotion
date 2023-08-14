@@ -1,0 +1,2 @@
+#!/bin/bash
+PATH="$(dirname $0):$PATH" "$0.real" "$@"

@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ "$1" == "guestproperty" -a "$2" == "enumerate" ]
+then
+	# /usr/bin/VBoxManage "$@" | sed 's@^@Name: @' | sed -E "s@\s+= '@, value: @" | sed -E "s/'\s+@ .*Z( |$)/, timestamp: 1402652779118595000, flags: /"
+	/usr/bin/VBoxManage "$@" --old-format
+else
+	/usr/bin/VBoxManage "$@"
+fi
